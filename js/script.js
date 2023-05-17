@@ -52,32 +52,14 @@ function playGame(playerInput) {
 
     if( argComputerMove == 'kamień' && argPlayerMove == 'papier'){
       printMessage('Ty wygrywasz!');
-    } /*else {
-      printMessage('Tym razem przegrywasz :(');
-    }*/
-
-    if( argComputerMove == 'papier' && argPlayerMove == 'nożyce'){
+    } else if(argComputerMove == 'papier' && argPlayerMove == 'nożyce') {
       printMessage('Ty wygrywasz!');
-    } /*else {
-      printMessage('Tym razem przegrywasz :(');
-    }*/
-    
-    if( argComputerMove == 'nożyce' && argPlayerMove == 'kamień'){
+    } else if (argComputerMove == 'nożyce' && argPlayerMove == 'kamień') {
       printMessage('Ty wygrywasz!');
-    } /*else {
+    } else if (argComputerMove = argPlayerMove) {
+      printMessage('Remis!');
+    } else {
       printMessage('Tym razem przegrywasz :(');
-    }*/
-
-    if( argComputerMove == 'kamień' && argPlayerMove == 'kamień'){
-      printMessage('Remis!');
-    }
-
-    if( argComputerMove == 'papier' && argPlayerMove == 'papier'){
-      printMessage('Remis!');
-    }
-
-    if( argComputerMove == 'nożyce' && argPlayerMove == 'nożyce'){
-      printMessage('Remis!');
     }
   }
 
@@ -88,55 +70,13 @@ let argMoveId = displayResult(argComputerMove, argPlayerMove);
 }
 
 document.getElementById('play-rock').addEventListener('click', function(){
-  printMessage(playGame(1));
+  playGame(1);
 });
 
 document.getElementById('play-paper').addEventListener('click', function(){
-  printMessage(playGame(2));
+  playGame(2);
 });
 
 document.getElementById('play-scissors').addEventListener('click', function(){
-  printMessage(playGame(3));
+  playGame(3);
 });
-
-/*Deklaracja wygranych gracza 
-if( computerMove == 'kamień' && playerMove == 'papier') {
-	printMessage('Wygrywa gracz!');
-  }
-
-  else if( computerMove == 'papier' && playerMove == 'nożyce'){
-	printMessage('Wygrywa gracz!');
-  }
-
-  else if( computerMove == 'nożyce' && playerMove == 'kamień') {
-	printMessage('Wygrywa gracz!');
-  }
-
-  else if ( playerMove == 'nieznany ruch') {
-	printMessage('Wygrywa komputer po przez wykonanie nieznanego ruchu gracza!');
-  }
-//Deklaracja remisu
-if( computerMove == 'kamień' && playerMove == 'kamień') {
-	printMessage('Remis!');
-  }
-
-  else if( computerMove == 'papier' && playerMove == 'papier') {
-	printMessage('Remis!');
-  }
-
-  else if( computerMove == 'nożyce' && playerMove == 'nożyce') {
-	printMessage('Remis!');
-  }
-
-//Deklaracja wygranych komputera 
-if( computerMove == 'kamień' && playerMove == 'nożyce') {
-	printMessage('Wygrywa komputer!');
-  }
-
-  else if( computerMove == 'papier' && playerMove == 'kamień') {
-	printMessage('Wygrywa komputer!');
-  }
-
-  else if( computerMove == 'nożyce' && playerMove == 'papier') {
-	printMessage('Wygrywa komputer!');
-}*/
