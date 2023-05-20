@@ -16,7 +16,7 @@
     return 'nieznany ruch';
   }
 
-  let randomNumber = Math.floor(Math.random() * 3 + 1);
+  const randomNumber = Math.floor(Math.random() * 3 + 1);
 
   console.log('Wylosowana liczba to: ' + randomNumber);
 
@@ -48,7 +48,7 @@
 
   console.log('moves:', argComputerMove, argPlayerMove);
 
-let argMoveId = displayResult(argComputerMove, argPlayerMove);
+const argMoveId = displayResult(argComputerMove, argPlayerMove);
 
 }
 
@@ -63,5 +63,4 @@ document.getElementById('play-paper').addEventListener('click', function(){
 document.getElementById('play-scissors').addEventListener('click', function(){
   playGame(3);
 });
- 
 }
